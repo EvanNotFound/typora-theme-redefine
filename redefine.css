@@ -274,7 +274,6 @@
 	border-radius: 14px;
 	border-left: none !important;
 	border-right: none !important;
-	box-shadow: var(--redefine-box-shadow-flat);
   }
   
   blockquote,
