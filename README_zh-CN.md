@@ -43,7 +43,7 @@
 
 4. 重启Typora并在 `Themes` 菜单中启用Redefine Theme
 
-##  支持
+## 支持
 
 欢迎 **pull request** 或者 提交 **issues**.
 
