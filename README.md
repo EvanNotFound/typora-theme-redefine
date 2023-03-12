@@ -4,15 +4,13 @@
 
 Enhance your writing experience with the official Typora theme from [Hexo Theme Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)
 
-Get the Preview of what you wrote in Typora directly.
+Get the Preview of what you wrote in Typora directly and enjoy the fun of writing.
 
 ## Screenshots
 
-![Screenshot 2023-03-12 at 5.15.49 PM](https://evan.beee.top/img/2023/03/12/b45badbf5ff7be05f350420004ef998e.png)
-
-![Screenshot 2023-03-12 at 5.16.13 PM](https://evan.beee.top/img/2023/03/12/98c115f09df5b7259585f32321aa8978.png)
-
-![Screenshot 2023-03-12 at 5.17.11 PM](https://evan.beee.top/img/2023/03/12/7b3c657c436ad286d0eb08b47aa96f90.png)
+<img width="1624" alt="Screenshot 2023-03-12 at 5 15 49 PM" src="https://user-images.githubusercontent.com/68590232/224575129-326d0068-244c-42cf-b4fe-b0f0cdd063ce.png">
+<img width="1624" alt="Screenshot 2023-03-12 at 5 16 13 PM" src="https://user-images.githubusercontent.com/68590232/224575136-8000b750-feb2-42ce-ad76-b94340132680.png">
+<img width="1624" alt="Screenshot 2023-03-12 at 5 17 11 PM" src="https://user-images.githubusercontent.com/68590232/224575139-b4ac936c-1c85-4c99-8d05-1d632d7ba37d.png">
 
 ## Installation
 
