@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+.DS_Store
+Thumbs.db
+db.json
+*.log
+public/
+.deploy*/
+.vercel
