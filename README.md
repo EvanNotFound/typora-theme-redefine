@@ -44,3 +44,12 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
 
    
 
+## Support
+
+Feel free to pull request and send issues on [Github](https://github.com/EvanNotFound/typora-theme-redefine)
+
+If you have any questions, please send an email to contact@ohevan.com. I will reply in time.
+
+Please give me a star to support me.
+
+Thanks for using typora theme redefine.

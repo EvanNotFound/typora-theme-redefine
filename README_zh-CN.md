@@ -9,7 +9,9 @@
 
 # Typora Redefine 主题
 
-本主题将 [Hexo Theme Redefine](https://github.com/EvanNotFound/hexo-theme-redefine) 的 Markdown 样式同步在 Typora 编辑器，让你可以直接在 Typora 中预览在Hexo 博客上的样式，清晰易懂，段落分明。
+本主题将 [Hexo Theme Redefine](https://github.com/EvanNotFound/hexo-theme-redefine) 的 Markdown 样式同步在 Typora 编辑器。
+
+让你可以直接在 Typora 中预览在Hexo 博客上的样式，清晰易懂，段落分明。
 
 ## 屏幕截图
 
@@ -19,27 +21,33 @@
 
 ## 安装方法
 
-1. Download Redefine Typora Theme Source Code from [release page](https://github.com/EvanNotFound/typora-theme-redefine/releases).
+1. 从[发布页面](https://github.com/EvanNotFound/typora-theme-redefine/releases)下载Redefine Typora Theme源码。
 
-   You will get files like this:
+   你会得到这样的文件：
 
    ```
    .
    └── typora-theme-redefine/
-       ├── redefine.css
+       ├── 重新定义.css
        ├── README.md
-       ├── LICENSE
-       └── redefine/
+       ├── 执照
+       └──重新定义/
            └── .....
    ```
 
-2. Open Typora, go to `Preferences` -> `Appearance` 
+2. 打开 Typora，转到 `Preferences` -> `Appearance`
 
-   Click on `Open Theme Folder`
+    点击 `Open Theme Folder` 打开主题存放文件夹
 
-3. Copy `redefine.css` and `redefine/` folder to theme folder
+3. 将下载下来的 `redefine.css` 和 `redefine/` 文件夹一起复制到主题文件夹
 
-4. Restart Typora and enable Redefine Theme in the `Themes` Menu
+4. 重启Typora并在 `Themes` 菜单中启用Redefine Theme
 
-   
+##  支持
+
+欢迎 **pull request** 或者 提交 **issues**.
+
+如有问题，请发邮件到 [contact@ohevan.com](mailto:contact@ohevan.com). 我会及时回复
+
+如果我做的主题还不错的话，欢迎给我 Github 点个 Star，谢谢
 
