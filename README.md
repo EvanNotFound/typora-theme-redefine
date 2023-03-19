@@ -4,7 +4,8 @@
   | <a title="Chinese" href="README_zh-CN.md">简中</a>
 </div>
 
-![Slogan](https://user-images.githubusercontent.com/68590232/224573821-a10ddf36-863d-4588-bc0e-178953513bfb.png)
+![Slogan-ty](https://user-images.githubusercontent.com/68590232/226150786-248efc6b-9b0b-48e9-ab42-81954d104b66.png)
+
 
 # Typora Theme Redefine
 
