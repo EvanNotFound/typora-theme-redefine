@@ -15,9 +15,13 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
 
 ## Screenshots
 
-<img width="1624" alt="Screenshot 2023-03-12 at 5 15 49 PM" src="https://user-images.githubusercontent.com/68590232/224575129-326d0068-244c-42cf-b4fe-b0f0cdd063ce.png">
-<img width="1624" alt="Screenshot 2023-03-12 at 5 16 13 PM" src="https://user-images.githubusercontent.com/68590232/224575136-8000b750-feb2-42ce-ad76-b94340132680.png">
-<img width="1624" alt="Screenshot 2023-03-12 at 5 17 11 PM" src="https://user-images.githubusercontent.com/68590232/224575139-b4ac936c-1c85-4c99-8d05-1d632d7ba37d.png">
+|                        Redefine Light                        |                        Redefine Dark                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img width="1624" alt="Screenshot 2023-03-19 at 5 32 22 PM" src="https://user-images.githubusercontent.com/68590232/226210971-c2d1a086-d69c-4e03-ae59-c25dcf681fc3.png"> | <img width="1624" alt="Screenshot 2023-03-19 at 5 27 10 PM" src="https://user-images.githubusercontent.com/68590232/226210847-03047a34-e21e-49e0-82d4-f2908ef87e61.png"> |
+| <img width="1624" alt="Screenshot 2023-03-19 at 5 32 28 PM" src="https://user-images.githubusercontent.com/68590232/226210973-51f1c9b9-0614-4cc6-bd81-c6cb7d7cf824.png"> | <img width="1624" alt="Screenshot 2023-03-19 at 5 27 19 PM" src="https://user-images.githubusercontent.com/68590232/226210849-a4c1ad8d-e06f-442c-a4fb-7977f31675bb.png"> |
+| <img width="1624" alt="Screenshot 2023-03-19 at 5 31 09 PM" src="https://user-images.githubusercontent.com/68590232/226210897-42de395b-8ae5-47b4-bac5-bae2d2598856.png"> | <img width="1624" alt="Screenshot 2023-03-19 at 5 27 59 PM" src="https://user-images.githubusercontent.com/68590232/226210851-e1afb710-bda2-4d47-a188-0d6cd73ae692.png"> |
+
+
 
 ## Installation
 
@@ -28,7 +32,8 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
    ```
    .
    └── typora-theme-redefine/
-       ├── redefine.css
+       ├── redefine-light.css
+       ├── redefine-dark.css
        ├── README.md
        ├── LICENSE
        └── redefine/
@@ -39,11 +44,13 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
 
    Click on `Open Theme Folder`
 
-3. Copy `redefine.css` and `redefine/` folder to theme folder
+3. Copy `redefine-light.css` and `redefine-dark.css` and `redefine/` folder to theme folder
 
 4. Restart Typora and enable Redefine Theme in the `Themes` Menu
 
-   
+5. Then set Light Theme to `Redefine Light` , Dark Theme to `Redefine Dark`
+
+   <img width="512" alt="Screenshot 2023-03-19 at 5 20 05 PM" src="https://user-images.githubusercontent.com/68590232/226210369-05949a11-807d-4ca2-9d11-132dd1cf04ed.png">
 
 ## Support
 
