@@ -21,7 +21,7 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
 | <img width="1624" alt="Screenshot 2023-03-19 at 5 32 28 PM" src="https://user-images.githubusercontent.com/68590232/226210973-51f1c9b9-0614-4cc6-bd81-c6cb7d7cf824.png"> | <img width="1624" alt="Screenshot 2023-03-19 at 5 27 19 PM" src="https://user-images.githubusercontent.com/68590232/226210849-a4c1ad8d-e06f-442c-a4fb-7977f31675bb.png"> |
 | <img width="1624" alt="Screenshot 2023-03-19 at 5 31 09 PM" src="https://user-images.githubusercontent.com/68590232/226210897-42de395b-8ae5-47b4-bac5-bae2d2598856.png"> | <img width="1624" alt="Screenshot 2023-03-19 at 5 27 59 PM" src="https://user-images.githubusercontent.com/68590232/226210851-e1afb710-bda2-4d47-a188-0d6cd73ae692.png"> |
 
-
+***Redefine Light SE** is the light version but with **dark code** theme.
 
 ## Installation
 
@@ -33,6 +33,7 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
    .
    └── typora-theme-redefine/
        ├── redefine-light.css
+       ├── redefine-light-se.css
        ├── redefine-dark.css
        ├── README.md
        ├── LICENSE
@@ -44,7 +45,7 @@ Get the Preview of what you wrote in Typora directly and enjoy the fun of writin
 
    Click on `Open Theme Folder`
 
-3. Copy `redefine-light.css` and `redefine-dark.css` and `redefine/` folder to theme folder
+3. Copy all the `.css` and `redefine/` folder to theme folder
 
 4. Restart Typora and enable Redefine Theme in the `Themes` Menu
 
