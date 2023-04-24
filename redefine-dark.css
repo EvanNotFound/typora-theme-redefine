@@ -3,6 +3,8 @@
 @import "redefine/sourcemode.dark.css";
 
 :root {
+  --select-text-bg-color: rgba(53, 82, 116, 0.97) !important;
+
   --side-bar-bg-color: #202124;
   --control-text-color: #777;
 
