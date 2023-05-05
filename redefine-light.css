@@ -127,6 +127,15 @@
       url("./redefine/noto-sans-sc-v26-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+html,
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: var(--background-color);
+  fill: currentColor;
+}
+
+
 html {
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
