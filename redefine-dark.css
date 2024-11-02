@@ -3,8 +3,6 @@
 @import "redefine/sourcemode.dark.css";
 
 :root {
-  --select-text-bg-color: rgba(53, 82, 116, 0.97) !important;
-
   --side-bar-bg-color: #202124;
   --control-text-color: #777;
 
@@ -29,7 +27,9 @@
   --highlight-addition: #144212;
   --highlight-deletion: #600;
 
-  --shadow-color-1: rgba(0, 0, 0, 0.08);
+  --shadow-color-1: rgba(255, 255, 255, 0.08);
+  --shadow-color-2: rgba(255, 255, 255, 0.05);
+  --shadow-hover-color: rgba(69, 69, 69, 0.28);
   --background-color: #202124;
   --background-color-transparent: rgba(32, 33, 36, 0.4);
   --second-background-color: #242529;
@@ -43,9 +43,6 @@
   --invert-text-color: #373d3f;
   --border-color: #4a4c53;
   --selection-color: #0068a6;
-  --shadow-color-1: rgba(255, 255, 255, 0.08);
-  --shadow-color-2: rgba(255, 255, 255, 0.05);
-  --shadow-hover-color: rgba(69, 69, 69, 0.28);
   --scrollbar-color: #898989;
   --scrollbar-color-hover: #a1a1a1;
   --scroll-bar-bg-color: #2a2c30;
@@ -92,12 +89,14 @@
   --redefine-border-radius-full: 50%;
   --redefine-border-radius-full-top: 50% 50% 0px 0px;
   --redefine-border-radius-full-bottom: 0px 0px 50% 50%;
+
+  --focus-mode-dim-color: #686868;
 }
 
 @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 @include-when-export url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
 
-/* open-sans-regular - latin-ext_latin */
+/* Import custom fonts */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -105,36 +104,26 @@
   src: local("Open Sans Regular"), local("OpenSans-Regular"),
     url("./redefine/open-sans-v17-latin-ext_latin-regular.woff2")
       format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* open-sans-italic - latin-ext_latin */
+
 @font-face {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: normal;
   src: local("Open Sans Italic"), local("OpenSans-Italic"),
-    url("./redefine/open-sans-v17-latin-ext_latin-italic.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    url("./redefine/open-sans-v17-latin-ext_latin-italic.woff2")
+      format("woff2");
 }
-/* open-sans-700 - latin-ext_latin */
+
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
   src: local("Open Sans Bold"), local("OpenSans-Bold"),
-    url("./redefine/open-sans-v17-latin-ext_latin-700.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    url("./redefine/open-sans-v17-latin-ext_latin-700.woff2")
+      format("woff2");
 }
-/* open-sans-700italic - latin-ext_latin */
+
 @font-face {
   font-family: "Open Sans";
   font-style: italic;
@@ -142,29 +131,22 @@
   src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"),
     url("./redefine/open-sans-v17-latin-ext_latin-700italic.woff2")
       format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-/* noto-sans-sc-regular - latin */
 @font-face {
   font-family: "Noto Sans SC";
   font-style: normal;
   font-weight: 400;
   src: url("./redefine/noto-sans-sc-v26-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("./redefine/noto-sans-sc-v26-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("./redefine/noto-sans-sc-v26-latin-regular.woff") format("woff");
 }
-/* noto-sans-sc-700 - latin */
+
 @font-face {
   font-family: "Noto Sans SC";
   font-style: normal;
   font-weight: 700;
   src: url("./redefine/noto-sans-sc-v26-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("./redefine/noto-sans-sc-v26-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("./redefine/noto-sans-sc-v26-latin-700.woff") format("woff");
 }
 
 html {
@@ -183,7 +165,6 @@ html,
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  background: #202124;
   background: var(--background-color);
   fill: currentColor;
   line-height: 1.625rem;
@@ -235,38 +216,7 @@ h6 {
   font-family: "Open Sans", "Noto Sans SC", sans-serif;
   color: var(--first-text-color);
 }
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-  text-decoration: none;
-}
-h1 tt,
-h1 code {
-  font-size: inherit;
-}
-h2 tt,
-h2 code {
-  font-size: inherit;
-}
-h3 tt,
-h3 code {
-  font-size: inherit;
-}
-h4 tt,
-h4 code {
-  font-size: inherit;
-}
-h5 tt,
-h5 code {
-  font-size: inherit;
-}
-h6 tt,
-h6 code {
-  font-size: inherit;
-}
+
 h1 {
   font-size: 3.2rem;
   font-weight: 600;
@@ -281,38 +231,24 @@ h2 {
   margin-top: 4rem;
 }
 
-/*@media print {
-	.typora-export h1,
-	.typora-export h2 {
-		border-bottom: none;
-		padding-bottom: initial;
-	}
-  
-	.typora-export h1::after,
-	.typora-export h2::after {
-		content: "";
-		display: block;
-		height: 100px;
-		margin-top: -96px;
-		border-top: 1px solid var(--shadow-color-1);
-	}
-  }*/
-
 h3 {
   font-size: 1.8rem;
   font-weight: 550;
   margin-top: 2.8rem;
 }
+
 h4 {
   font-size: 1.5rem;
   font-weight: 550;
   margin-top: 2.5rem;
 }
+
 h5 {
   font-size: 1.28rem;
   font-weight: 550;
   margin-top: 2.2rem;
 }
+
 h6 {
   font-size: 1em;
   font-weight: 550;
@@ -345,36 +281,28 @@ li > ol,
 li > ul {
   margin: 0 0;
 }
-hr {
-  height: 2px;
-  padding: 0;
-  margin: 2rem 0;
-  background-color: var(--shadow-color-1);
-  border: 0 none;
-  overflow: hidden;
-  box-sizing: content-box;
-}
 
-li p.first {
-  display: inline-block;
-}
 ul,
 ol {
   padding-left: 30px;
 }
+
 ul:first-child,
 ol:first-child {
   margin-top: 0;
 }
+
 ul:last-child,
 ol:last-child {
   margin-bottom: 0;
 }
+
 blockquote {
   border-left: 4px solid var(--default-text-color);
   padding: 0 15px;
-  color: #b1b1b1;
+  color: var(--second-text-color);
 }
+
 blockquote blockquote {
   padding-right: 0;
 }
@@ -498,7 +426,6 @@ code {
   margin-top: 10px;
   margin-bottom: 1.2rem;
   position: relative;
-  margin-bottom: 1.2rem 0;
   padding-bottom: 15px;
   padding-right: 0px;
   padding-left: 0px;
@@ -555,7 +482,6 @@ code {
   top: 0.285714286rem;
 }
 .md-image > .md-meta {
-  /*border: 1px solid #ddd;*/
   border-radius: 3px;
   padding: 2px 0px 0px 4px;
   font-size: 0.9em;
@@ -563,7 +489,7 @@ code {
 }
 
 .md-tag {
-  color: #626262;
+  color: var(--third-text-color);
   opacity: 1;
 }
 
@@ -589,9 +515,32 @@ code {
   border-width: 1px;
 }
 
-/** focus mode */
-.on-focus-mode blockquote {
-  border-left-color: rgba(85, 85, 85, 0.12);
+/** Focus mode styles */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) {
+  color: var(--focus-mode-dim-color) !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: var(--focus-mode-dim-color) !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
+  opacity: 0.5 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container) {
+  color: var(--focus-mode-dim-color) !important;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+  color: var(--focus-mode-dim-color) !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+  color: var(--default-text-color);
 }
 
 header,
@@ -607,17 +556,12 @@ footer {
 }
 
 .mac-seamless-mode #typora-sidebar {
-  background-color: var(--background-color);
   background-color: var(--side-bar-bg-color);
 }
 
 .md-lang {
   color: #b4654d;
 }
-
-/*.html-for-mac {
-	--item-hover-bg-color: #E6F0FE;
-  }*/
 
 #md-notification .btn {
   border: 0;
@@ -637,11 +581,11 @@ footer {
 }
 
 .menu-item-container a.menu-style-btn {
-  background-color: #f5f8fa;
+  background-color: var(--second-background-color);
   background-image: linear-gradient(
     180deg,
-    hsla(0, 0%, 100%, 0.8),
-    hsla(0, 0%, 100%, 0)
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
   );
 }
 
@@ -672,7 +616,6 @@ footer {
 
 .file-library-node.active > .file-node-content,
 .file-list-item.active {
-  color: white;
   color: var(--first-text-color);
 }
 
@@ -703,4 +646,135 @@ footer {
 
 .file-node-content:hover {
   color: var(--second-text-color);
+}
+
+/* Fix for file node children display */
+.file-node-expanded > .file-node-children {
+  display: grid;
+}
+
+/* New additions to fix white borders in menus and UI elements */
+
+/* Menu borders */
+.menu,
+.dropdown-menu,
+.context-menu,
+#md-searchpanel,
+.md-notification-container,
+.popover {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+}
+
+
+.dropdown-menu .divider,
+.context-menu .divider,
+.popover .divider {
+  background-color: var(--shadow-color-1);
+}
+
+.popover-title {
+  background-color: var(--second-background-color);
+  border-bottom: 1px solid var(--shadow-color-1);
+}
+
+.popover-content {
+  background-color: var(--second-background-color);
+}
+
+.modal-content {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--shadow-color-1);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+  color: var(--default-text-color);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--third-background-color);
+}
+
+.form-control {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+  color: var(--default-text-color);
+}
+
+/* Adjusting borders for other UI elements */
+#md-searchpanel input,
+#md-searchpanel .btn,
+#searchpanel-msg {
+  border: 1px solid var(--shadow-color-1);
+}
+
+#searchpanel-msg {
+  background-color: var(--second-background-color);
+  color: var(--default-text-color);
+}
+
+.ty-preferences input[type="search"],
+.ty-preferences select {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+  color: var(--default-text-color);
+}
+
+.ty-preferences .btn-default {
+  background-color: var(--second-background-color);
+  border: 1px solid var(--shadow-color-1);
+}
+
+.ty-preferences .btn-default:hover {
+  background-color: var(--third-background-color);
+}
+
+/* Adjusting borders in the sidebar */
+#typora-sidebar {
+  border-right: 1px solid var(--shadow-color-1);
+}
+
+.sidebar-tab {
+  color: var(--default-text-color);
+}
+
+.sidebar-tabs {
+  border-bottom: 1px solid var(--shadow-color-1);
+}
+
+.sidebar-footer {
+  border-top: 1px solid var(--shadow-color-1);
+}
+
+hr {
+  border: none; /* Remove default border */
+  border-top: 1px solid var(--shadow-color-1); /* Use a suitable color variable */
+  margin: 24px 0; /* Adjust margins as desired */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px; /* Reduce the width to make it thinner */
+  background-color: transparent; /* Make the scrollbar track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* Set a low-opacity color for the thumb */
+  border-radius: 2px; /* Round the edges for a sleeker look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly increase visibility on hover */
 }
